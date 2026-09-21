@@ -1,0 +1,83 @@
+:root{
+    --bgColor: #F7F5F0;
+    --formColor: lightgray;
+    --textColor: black;
+    --buttonColor: black;
+}
+
+
+*{
+    margin: 0;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgColor);
+    position: relative;
+}
+
+h2{
+    text-align: center;
+}
+
+.formDiv{
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#sekkForm{
+    background-color: var(--formColor);
+    padding: 25px 35px;
+    border: 1px solid black;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}   
+
+#sekkForm label{
+    color: var(--textColor);
+    font-size: 1.3rem;
+}
+
+#sekkForm select{
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+#sekkForm select option{
+    font-size: 1.3rem;
+}
+
+#sekkForm button{
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--buttonColor);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: ease-in-out 20ms;
+}
+
+#sekkForm button:hover{
+    transform: scale(1.04);
+}
+
+.sekkMedTingDiv{
+    height: 50vh;
+    width: 50%;
+    background-color: green;
+    margin: 0 auto;
+}
