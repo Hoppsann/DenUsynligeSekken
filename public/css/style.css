@@ -1,0 +1,42 @@
+:root{
+    --bgColor: #F7F5F0;
+    --formColor: lightgray;
+    --textColor: black;
+}
+
+
+*{
+    margin: 0;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgColor);
+    position: relative;
+}
+
+#sekkForm{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--formColor);
+    padding: 25px 35px;
+    border: 1px solid black;
+    border-radius: 16px;
+}   
+
+#sekkForm label{
+    color: var(--textColor);
+}
+
+#sekkForm select{
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+}
+
+#sekkForm select option{
+    border: 1px solid black;
+}
