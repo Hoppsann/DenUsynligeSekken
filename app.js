@@ -17,11 +17,13 @@ app.get("/", (req, res) =>{
 
 app.get("/sekken", (req, res) =>{
 
+    // Her kan vi gjøre som Mc choke
+    
     if(total_psycological_weight == 32) {
         imgurl = "./img/sekk1.png"
     }
 
-    
+
     res.render("sekken",{
         vekt: total_psycological_weight || 0,
         img: imgurl
