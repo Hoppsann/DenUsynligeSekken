@@ -13,13 +13,14 @@ app.get("/", (req, res) =>{
 })
 
 app.get("/sekken", (req, res) =>{
-    res.render("sekken")
+    res.render("sekken",{vekt: total_psycological_weight})
 })
 
 app.post("/sekken", (req, res) =>{
     const {sekk} = req.body;
     const weight_amount = Number(sekk)
-    console.log(weight_amount)
+    total_psycological_weight += weight_amount;
+    
     
 
     
