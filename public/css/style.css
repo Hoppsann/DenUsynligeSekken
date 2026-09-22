@@ -4,12 +4,34 @@
     --textColor: black;
     --buttonColor: black;
     --itemBgColor: rgb(234, 214, 182);
+    --navBgColor: lightgray;
 }
 
 
 *{
     margin: 0;
 }
+nav {
+    margin: 3rem;
+}
+
+nav ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+nav ol li a {
+    text-decoration: none;
+    background-color: var(--navBgColor);
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
 
 .hero{
     width: 100%;
