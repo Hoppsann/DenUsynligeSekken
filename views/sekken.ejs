@@ -1,32 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/sekken.js" defer></script>
-</head>
+<%- include("partials/head.ejs") %>
 <body>
+    <%- include("partials/nav.ejs") %>
     <section class="hero">
-        <h2><%= totalSkala %></h2>
         <div class="sekkMedTingDiv">
-            <% sekken.forEach(element =>{ %>
-                <div>
-                    <p><%= element.tyngde %></p>
-                </div>
-            <% }) %>
-
+            
         </div>
 
         <div class="formDiv">
-            <form action="" method="post" id="sekkForm">
-                <label for="">Sekken: </label>
-                    <label for="">Tyngde i hverdagen</label>
-                    <input type="text" name="tyngde" id="tyngde">
-                    <label for="">Skala fra 1 - 10 </label>
-                    <input type="text" name="skala" id="skala">
-                <button>Leggt til</button>
+            <form action="" id="sekkForm">
+                <label for="">Halla på dæ</label>
+                <select id="selectForm">
+                    <option value="1">Skolepress</option>
+                    <option value="2">Forventninger</option>
+                    <option value="3">Karakterer</option>
+                    <option value="4">Økonomi</option>
+                    <option value="5">Familie</option>
+                    <option value="6">Venner</option>
+                    <option value="7">Sosiale medier</option>
+                    <option value="8">Framtiden</option>
+                    <option value="9">Søvn og hvile</option>
+                    <option value="10">Kropp og utseende</option>
+                </select>
             </form>
         </div>
     </section>
