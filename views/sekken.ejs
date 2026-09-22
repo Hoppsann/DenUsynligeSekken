@@ -9,7 +9,14 @@
 </head>
 <body>
     <section class="hero">
+        <h2><%= totalSkala %></h2>
         <div class="sekkMedTingDiv">
+            <% sekken.forEach(element =>{ %>
+                <div>
+                    <p><%= element.tyngde %></p>
+                </div>
+            <% }) %>
+
         </div>
 
         <div class="formDiv">
