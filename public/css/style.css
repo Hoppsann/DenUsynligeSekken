@@ -30,6 +30,14 @@ h2{
     transform: translate(-50%, -50%);
 
 }
+/* bytt ut og fiks på backpack senere, akuratt nå så er det placeholder for det som skal være senere */
+#backpack { 
+    position: absolute;
+    width: 125%;
+    height: 100%;
+    left: -11rem;
+    top: 0rem;
+}
 
 #sekkForm{
     background-color: var(--formColor);
@@ -76,15 +84,16 @@ h2{
 }
 
 .sekkMedTingDiv{
-    height: 75vh;
+    height: 55vh;
     width: 50%;
     overflow-y: auto;
-    background-color: green;
-    margin: 0 auto;
+    /* background-color: green; */
+    margin: 20rem auto;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    justify-content: center;
 }
 
 .sekkMedTingDiv div {
