@@ -9,10 +9,14 @@
 let select = document.getElementById("selectForm");
 let sekkDiv = document.getElementById("sekkDiv");
 let resetButton = document.getElementById("resetButton");
+
 let category;
+let image;
+let imageAlt;
+
 let score = 0;
 
-let fjernKnappTekst = "Fjern";
+let fjernKnappTekst = "X";
 
 
 select.addEventListener("change", (event) =>{
@@ -23,9 +27,13 @@ select.addEventListener("change", (event) =>{
     switch(number){
         case 1:
             category = "Kropp og utseende";
+            image = "img.jpg"
+            imageAlt = "Bilde av en person som ser seg i speilet"
             break;
         case 2:
             category = "Søvn og hvile";
+            image = "img2.jpg"
+            imageAlt = "Noen som sover"
             break;
         case 3:
             category = "Framtiden";
@@ -62,15 +70,16 @@ select.addEventListener("change", (event) =>{
     <div data-value="${number}">
     <p>${category}</p> 
     <button class="removeButton">${fjernKnappTekst}</button>
+    <img src="/img/${image}" alt="${imageAlt}"
     </div>
     `;
    
-    if(!document.querySelector(".resetButton")){
-        sekkDiv.innerHTML += 
-        `
-        <button class="resetButton" id="resetButton">Reset</button>
-        `;
-    }
+    // if(!document.querySelector(".resetButton")){
+    //     sekkDiv.innerHTML += 
+    //     `
+    //     <button class="resetButton" id="resetButton">Reset</button>
+    //     `;
+    // }
 
     
 })
