@@ -15,7 +15,7 @@ let score = 0;
 let fjernKnappTekst = "Fjern";
 
 
-select.addEventListener("change", () =>{
+select.addEventListener("change", (event) =>{
     let selectValue = document.getElementById("selectForm").value;
     let number = Number(selectValue);
     
@@ -52,9 +52,11 @@ select.addEventListener("change", () =>{
             category = "Skolepress";
             break;
     }   
-
     score += number;
     document.getElementById("scoreText").innerHTML = score;
+
+    event.target.options[event.target.selectedIndex].disabled = true;
+
     document.getElementById("sekkDiv").innerHTML += 
     `
     <div data-value="${number}">
@@ -82,7 +84,7 @@ sekkDiv.addEventListener("click", (event) => {
 
         score -= value;
         div.remove();
-
+        select.querySelector(`option[value = "${value}"]`).disabled = false
         document.getElementById("scoreText").innerHTML = score;
 
     };
@@ -91,8 +93,15 @@ sekkDiv.addEventListener("click", (event) => {
         sekkDiv.innerHTML = "";
         score = 0;
         document.getElementById("scoreText").innerHTML = score;
+
+        for(let i = 0; i < select.options.length; i++){
+            select.options[i].disabled = false;
+        }
     }
 
 });
+
+
+
 
 
