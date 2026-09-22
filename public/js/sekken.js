@@ -28,10 +28,12 @@ select.addEventListener("change", () =>{
         case 1:
             category = "Kropp og utseende";
             image = "img.jpg"
-            imageAlt = "Tobias"
+            imageAlt = "Bilde av en person som ser seg i speilet"
             break;
         case 2:
             category = "Søvn og hvile";
+            image = "img2.jpg"
+            imageAlt = "Noen som sover"
             break;
         case 3:
             category = "Framtiden";
