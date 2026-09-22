@@ -1,7 +1,5 @@
 const express = require("express");
-const mongoose = require("mongoose");
 
-const mongodb = mongoose.connect("mongodb://localhost:27017/helse")
 
 const app = express();
 
@@ -11,6 +9,7 @@ app.use(express.static("public"))
 
 
 let total_psycological_weight = 0;
+let sekk;
 
 
 
@@ -21,18 +20,20 @@ app.get("/", (req, res) =>{
 app.get("/sekken", (req, res) =>{
     res.render("sekken",{
         vekt: total_psycological_weight || 0,
+        text: sekk
+        
     })
 })
 
 app.post("/sekken", (req, res) =>{
-    const {sekk} = req.body;
+    sekk = req.body.sekk;
     console.log(sekk);
     const weight_amount = Number(sekk);
     total_psycological_weight += weight_amount;
     
     
     
-    res.redirect("/sekken")
+    res.redirect("/sekken");
 })
 
 
