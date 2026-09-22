@@ -1,6 +1,6 @@
 :root{
-    --bgColor: #F7F5F0;
-    --formColor: lightgray;
+    --bgColor: #f8f1e1;
+    --formColor: rgb(180, 213, 221);
     --textColor: black;
     --buttonColor: black;
 }
@@ -9,6 +9,8 @@
 *{
     margin: 0;
 }
+
+body
 
 .hero{
     width: 100%;
@@ -39,7 +41,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 1rem;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }   
 
@@ -69,11 +71,11 @@ h2{
     color: white;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: ease-in-out 20ms;
+    transition: 0.1s;
 }
 
 #sekkForm button:hover{
-    transform: scale(1.04);
+    transform: scale(1.08);
 }
 
 .sekkMedTingDiv{
