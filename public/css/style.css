@@ -1,14 +1,42 @@
 :root{
-    --bgColor: #F7F5F0;
+    --bgColor: #569eea;
+    --bgSecondaryColor: rgb(53, 98, 176);
     --formColor: lightgray;
     --textColor: black;
     --buttonColor: black;
     --itemBgColor: rgb(234, 214, 182);
     --navBgColor: lightgray;
+    --circleSize: 60rem;
 }
 
 
 *{
+    margin: 0;
+}
+
+body {
+    background-color: var(--bgColor);
+}
+
+#bgCircle {
+    background-color: var(--bgSecondaryColor);
+    width: var(--circleSize);
+    height: var(--circleSize);
+    position: absolute;
+    border-radius: 100%;
+    left: 50%;
+    top: 12%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%);
+    z-index: -1;
+}
+
+
+#scoretext {
+    color: white;
+    font-size: 5rem;
+    padding: 0;
     margin: 0;
 }
 nav {
@@ -44,21 +72,19 @@ h2{
 }
 
 .formDiv{
-    position: absolute;
     display: flex;
-    gap: 20px;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    justify-content: center;
 
 }
-/* bytt ut og fiks på backpack senere, akuratt nå så er det placeholder for det som skal være senere */
+
+#backpackcontainer {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
 #backpack { 
-    position: absolute;
-    width: 125%;
-    height: 100%;
-    left: -11rem;
-    top: 0rem;
+    width: auto;
+    height: 40rem;
 }
 
 #sekkForm{
@@ -107,10 +133,9 @@ h2{
 
 .sekkMedTingDiv{
     height: 55vh;
-    width: 50%;
+    width: 100vw;
     overflow-y: auto;
     /* background-color: green; */
-    margin: 20rem auto;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
