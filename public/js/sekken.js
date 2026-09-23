@@ -9,13 +9,13 @@
 let select = document.getElementById("selectForm");
 let sekkDiv = document.getElementById("sekkDiv");
 let resetButton = document.getElementById("resetButton");
+let sekkImage = document.getElementById("backpack");
 
 let category;
 let image;
 let imageAlt;
 
 let score = 0;
-
 let fjernKnappTekst = "X";
 
 
@@ -61,6 +61,21 @@ select.addEventListener("change", (event) =>{
             break;
     }   
     score += number;
+
+    if(score >= 0 && score < 10){
+        sekkImage.src = "/img/backpack1.png";
+    }else if(score > 10 && score < 20){
+        sekkImage.src = "/img/backpack2.png";
+    }else if(score > 20 && score < 30){
+        sekkImage.src = "/img/backpack3.png";
+    }else if(score > 30 && score < 40){
+        sekkImage.src = "/img/backpack4.png";
+    }else if(score > 40 && score < 50){
+        sekkImage.src = "/img/backpack5.png";
+    }else if(score > 50 && score < 55){
+        sekkImage.src = "/img/backpack6.png";
+    }
+
     document.getElementById("scoreText").innerHTML = score;
 
     event.target.options[event.target.selectedIndex].disabled = true;
@@ -74,12 +89,12 @@ select.addEventListener("change", (event) =>{
     </div>
     `;
    
-    // if(!document.querySelector(".resetButton")){
-    //     sekkDiv.innerHTML += 
-    //     `
-    //     <button class="resetButton" id="resetButton">Reset</button>
-    //     `;
-    // }
+    if(!document.querySelector(".resetButton")){
+        sekkDiv.innerHTML += 
+        `
+        <button class="resetButton" id="resetButton">Reset</button>
+        `;
+     }
 
     
 })
