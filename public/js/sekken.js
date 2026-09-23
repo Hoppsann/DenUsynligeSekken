@@ -63,18 +63,17 @@ select.addEventListener("change", (event) =>{
     score += number;
 
     if(score >= 0 && score < 10){
-        image = "img.jpg";
-        sekkImage.src = "/img/img.jpg"
+        sekkImage.src = "/img/backpack1.png";
     }else if(score > 10 && score < 20){
-        image = "img2.jpg";
+        sekkImage.src = "/img/backpack2.png";
     }else if(score > 20 && score < 30){
-        image = "img2.jpg";
+        sekkImage.src = "/img/backpack3.png";
     }else if(score > 30 && score < 40){
-        image = "img2.jpg";
+        sekkImage.src = "/img/backpack4.png";
     }else if(score > 40 && score < 50){
-        image = "img2.jpg";
+        sekkImage.src = "/img/backpack5.png";
     }else if(score > 50 && score < 55){
-        image = "img2.jpg";
+        sekkImage.src = "/img/backpack6.png";
     }
 
     document.getElementById("scoreText").innerHTML = score;
