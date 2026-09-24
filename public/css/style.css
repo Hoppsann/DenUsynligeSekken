@@ -376,7 +376,7 @@ h2{
 
 #liste ol li:hover{
     transform: translateX(-4px);
-    box-shadow: 4px 4px 10px 1px black;
+    box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.394);
     transition: 0.1s;
 }
 
