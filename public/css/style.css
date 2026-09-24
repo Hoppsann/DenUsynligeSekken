@@ -266,3 +266,43 @@ h2{
     font-family: "nunito";
     src: url(/fonts/Nunito-VariableFont_wght.ttf);
 }
+
+
+
+
+#liste ol{
+    padding: 2rem;
+    font-size: 2rem;
+    list-style-type: none;
+}
+
+#liste ol li {
+    margin-top: 1.2rem;
+    padding: 0.75rem;
+    background-color: var(--color3);
+    border-radius: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+#liste ol li p {
+    color: var(--textColor);
+    margin-left: 1rem;
+}
+
+.bulletPoint {
+    margin-left: 0.3rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(255, 16, 63);
+    border-radius: 100%;
+}
+
+#bulletPoint1 {background-color: red;}
+#bulletPoint2 {background-color: orange;}
+#bulletPoint3 {background-color: yellow;}
+#bulletPoint4 {background-color: green;}
+#bulletPoint5 {background-color: lightblue;}
+#bulletPoint6 {background-color: darkblue;}
+#bulletPoint7 {background-color: purple;}
+#bulletPoint8 {background-color: pink;}
