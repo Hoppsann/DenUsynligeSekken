@@ -381,3 +381,23 @@ h2{
     display: none;
 }
 
+#resetbutton {
+    width: 8rem;
+    height: 4rem;
+    position: absolute;
+    z-index: 10;
+    bottom: 3rem;
+    margin-left: 3rem;
+    font-size: 2rem;
+    background-color: #37829b;
+    color: var(--textColor);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: 0.15s;
+}
+
+#resetbutton:hover {
+    transform: scale(1.05);
+    background-color: #32758b;
+}
