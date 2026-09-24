@@ -336,8 +336,24 @@ h2{
     src: url(/fonts/Nunito-VariableFont_wght.ttf);
 }
 
+#lefth1 {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
 
-
+#lefth1 h1 {
+    background-color: var(--color3);
+    width: 30rem;
+    height: 7.5rem;
+    border-radius: 2rem;
+    font-size: 4rem;
+    color: var(--textColor);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #liste ol{
     padding: 2rem;
@@ -361,6 +377,11 @@ h2{
 #liste ol li:hover{
     transform: translateX(-4px);
     box-shadow: 4px 4px 10px 1px black;
+    transition: 0.1s;
+}
+
+#liste ol li:hover {
+    transform: scale(1.05);
 }
 
 #liste ol li p {
