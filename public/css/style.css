@@ -23,6 +23,7 @@ body {
     flex-direction: column;
     height: 100vh;
     font-family: nunito;
+    scrollbar-color: var(--color3) #00000000;
 }
 
 /* #bgCircle {
@@ -96,11 +97,15 @@ nav ol li a {
     border-radius: 2rem;
     position: relative;
 }
+
 #rightright {
     background-color: var(--bgSecondaryColor);
     flex: 1;
     height: 100%;
     border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 #righttop {
@@ -108,6 +113,7 @@ nav ol li a {
     flex: 1;
     width: 100%;
     gap: 1rem;
+    min-height: 0;
 }
 
 #rightbottom {
@@ -421,4 +427,60 @@ h2{
 #resetButton:hover {
     transform: scale(1.05);
     background-color: #32758b;
+}
+
+#infoBox {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 1.5rem 2rem;
+    color: #4f483d;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    /* background-color: var(--color3); */
+}
+
+#infoBox h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+#infoBox h2 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+#infoBox p {
+    margin-bottom: 0.5rem;
+}
+
+#infoBox hr {
+    margin: 1.5rem 0;
+    border: none;
+    border-top: 1px solid var(--textColor);
+    opacity: 0.4;
+}
+
+#helpList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#helpList a {
+    display: block;
+    background-color: var(--color3);
+    color: var(--textColor);
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    transition: 0.15s;
+}
+
+#helpList a:hover {
+    transform: scale(1.02);
 }
