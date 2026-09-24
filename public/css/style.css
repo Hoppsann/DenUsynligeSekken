@@ -345,6 +345,8 @@ h2{
     list-style-type: none;
 }
 
+
+
 #liste ol li {
     margin-top: 1.2rem;
     padding: 0.75rem;
@@ -352,6 +354,13 @@ h2{
     border-radius: 4rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+#liste ol li:hover{
+    transform: translateX(-4px);
+    box-shadow: 4px 4px 10px 1px black;
 }
 
 #liste ol li p {
@@ -375,3 +384,30 @@ h2{
 #bulletPoint6 {background-color: darkblue;}
 #bulletPoint7 {background-color: purple;}
 #bulletPoint8 {background-color: pink;}
+
+
+#sekkForm {
+    display: none;
+}
+
+#resetButton {
+    width: 8rem;
+    height: 4rem;
+    position: absolute;
+    z-index: 10;
+    bottom: 3rem;
+    margin-left: 3rem;
+    font-size: 2rem;
+    background-color: #37829b;
+    color: var(--textColor);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+#resetButton:hover {
+    transform: scale(1.05);
+    background-color: #32758b;
+}

@@ -5,14 +5,16 @@
         <div id="left">
             <div id="liste">
                 <ol>
-                    <li><div class="bulletPoint" id="bulletPoint1"></div><p>Forventninger</p></li>
-                    <li><div class="bulletPoint" id="bulletPoint2"></div><p>Karakterer</p></li>
-                    <li><div class="bulletPoint" id="bulletPoint3"></div><p>Skolepress</p></li>
-                    <li><div class="bulletPoint" id="bulletPoint4"></div><p>Økonomi</p></li>
-                    <li><div class="bulletPoint" id="bulletPoint5"></div><p>Familie</p></li>
-                    <li><div class="bulletPoint" id="bulletPoint6"></div><p>Venner</p></li>
-                    <li><div class="bulletPoint" id="bulletPoint7"></div><p>Sosiale Medier</p></li>
-                    <li><div class="bulletPoint" id="bulletPoint8"></div><p>Framtiden</p></li>
+                    <li onclick="addToBag(8), disable('bulletPoint8')" id="bulletPoint8"><div class="bulletPoint" id="bulletPoint8"></div><p>Forventninger</p></li>
+                    <li onclick="addToBag(7), disable('bulletPoint7')" id="bulletPoint7"><div class="bulletPoint" id="bulletPoint7"></div><p>Karakterer</p></li>
+                    <li onclick="addToBag(10), disable('bulletPoint10')" id="bulletPoint10"><div class="bulletPoint" id="bulletPoint10"></div><p>Skolepress</p></li>
+                    <li onclick="addToBag(4), disable('bulletPoint4')" id="bulletPoint4"><div class="bulletPoint" id="bulletPoint4"></div><p>Økonomi</p></li>
+                    <li onclick="addToBag(6), disable('bulletPoint6')" id="bulletPoint6"><div class="bulletPoint" id="bulletPoint6"></div><p>Familie</p></li>
+                    <li onclick="addToBag(5), disable('bulletPoint5')" id="bulletPoint5"><div class="bulletPoint" id="bulletPoint5" ></div><p>Venner</p></li>
+                    <li onclick="addToBag(9), disable('bulletPoint9')" id="bulletPoint9"><div class="bulletPoint" id="bulletPoint9"></div><p>Sosiale medier</p></li>
+                    <li onclick="addToBag(3), disable('bulletPoint3')" id="bulletPoint3"><div class="bulletPoint" id="bulletPoint3" ></div><p>Framtiden</p></li>
+                    <li onclick="addToBag(2), disable('bulletPoint2')" id="bulletPoint2"><div class="bulletPoint" id="bulletPoint2"></div><p>Søvn og hvile</p></li>
+                    <li onclick="addToBag(1), disable('bulletPoint1')" id="bulletPoint1"><div class="bulletPoint" id="bulletPoint1"></div><p>Kropp og utseende</p></li>
                 </ol>
             </div>
             <div class="formDiv">
@@ -32,7 +34,6 @@
                     </select>
             </form>
             </div>
-            <button class="resetButton" id="resetButton">Reset</button>
         </div>
         <div id="right">
             <div id="righttop">
@@ -41,7 +42,7 @@
                     <img src="/img/open-backpack-back.png" id="backpack" class="backpackBack" draggable="false">
                     <img src="/img/open-backpack-front.png" id="backpack2" class="backpackFront" draggable="false">
                 </div>
-                <h2 id="scoreText">0</h2>
+                <h2 id="scoreText">0%</h2>
                 </div>
                 <div id="rightright">
                 </div>
@@ -49,7 +50,7 @@
 
 
             <div id="rightbottom">
-                            <div class="sekkMedTingDiv" id="sekkDiv">
+                <div class="sekkMedTingDiv" id="sekkDiv">
             </div>
             </div>
         </div>

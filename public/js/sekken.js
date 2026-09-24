@@ -10,6 +10,7 @@ let score = 0;
 let fjernKnappTekst = "X";
 
 
+
 select.addEventListener("change", (event) =>{
     let selectValue = document.getElementById("selectForm").value;
     let number = Number(selectValue);
@@ -80,7 +81,6 @@ select.addEventListener("change", (event) =>{
     <div data-value="${number}">
     <p>${category}</p> 
     <button class="removeButton">${fjernKnappTekst}</button>
-    <img src="/img/${image}" alt="${imageAlt}"
     </div>
     `;
    
@@ -244,28 +244,313 @@ sekkDiv.addEventListener("click", (event) => {
         setTimeout(() => {
             removeElement.remove()
         }, 4000);
+        console.log("value", value)
+        enable(value);
+        updateBackground(score);
 
     };
 
     if(event.target.classList.contains("resetButton")){
+
+    let items = sekkDiv.querySelectorAll(".removeButton");
+
+    items.forEach((button, index) => {
+
+        setTimeout(() => {
+
+            let div = button.parentElement;
+            let value = Number(div.dataset.value);
+            let removeImage;
+
+            switch(value){
+                case 1: 
+                    removeImage = "utseende.jpg"; 
+                    break;
+
+                case 2:
+                     removeImage = "hvile.jpg"; 
+                     break;
+
+                case 3:
+                     removeImage = "framtiden.jpg"; 
+                     break;
+
+                case 4:
+                     removeImage = "økonomi.jpg"; 
+                     break;
+
+                case 5:
+                     removeImage = "venner.jpg"; 
+                     break;
+
+
+                case 6:
+                     removeImage = "familie.jpg"; 
+                     break;
+
+                case 7:
+                     removeImage = "karakterer.jpg"; 
+                     break;
+
+                case 8:
+                     removeImage = "forventninger.jpg"; 
+                     break;
+
+                case 9:
+                     removeImage = "tiktok.png"; 
+                     break;
+
+                case 10:
+                     removeImage = "skolepress.jpg"; 
+                     break;
+            }
+
+            let removeElement = document.createElement("img");
+            removeElement.src = `/img/${removeImage}`;
+            removeElement.classList.add("removeElement");
+            document.body.appendChild(removeElement);
+
+            setTimeout(() => {
+                removeElement.remove();
+            }, 4000);
+
+            div.remove();
+
+            score -= value;
+            let persentage = (score / 55) * 100;
+            document.getElementById("scoreText").innerHTML = Math.round(persentage) + "%";
+
+            updateBackground(score)
+
+            enable(value)
+        }, index * 500);
+
+    });
+
+    setTimeout(() => {
+
         sekkDiv.innerHTML = "";
         score = 0;
-        document.getElementById("scoreText").innerHTML = score;
+        document.getElementById("scoreText").innerHTML = score + "%";
 
         for(let i = 0; i < select.options.length; i++){
             select.options[i].disabled = false;
         }
-    }
 
-    if(!document.querySelector(".removeButton")){
-        sekkDiv.innerHTML = "";
-    }
+        for(let i = 1; i <= 10; i++){
+            enable(i);
+        }
 
+        updateBackground(score);
 
+    }, items.length * 500);
+}
 
+    
 });
 
 
 
 
 
+function addToBag(value) {
+   
+    let number = Number(value);
+
+    switch(number){
+        case 1:
+            category = "Kropp og utseende";
+            image = "utseende.jpg";
+            imageAlt = "dame som ser seg i speilet";
+            break;
+        case 2:
+            category = "Søvn og hvile";
+            image = "hvile.jpg";
+            imageAlt = "jente som sover";
+            break;
+        case 3:
+            category = "Framtiden";
+            image = "framtiden.jpg";
+            imageAlt = "robot";
+            break;
+        case 4:
+            category = "Økonomi";
+            image = "økonomi.jpg"
+            imageAlt = "sparegris som bruker kalkulator";
+            break;
+        case 5:
+            category = "Venner";
+            image = "venner.jpg";
+            imageAlt = "4 venner som sitter sammen ved en kliffe";
+            break;
+        case 6: 
+            category = "Familie";
+            image = "familie.jpg";
+            imageAlt = "familie i solnedgang";
+            break;
+        case 7: 
+            category = "Karakterer";
+            image = "karakterer.jpg";
+            imageAlt = "klasserom";
+            break;
+        case 8:
+            category = "Forventninger";
+            image = "forventninger.jpg";
+            imageAlt = "medalje";
+            break;
+        case 9:
+            category = "Sosiale medier";
+            image = "sosiale-medier.jpg";
+            imageAlt = "telefon med sosiale medier installert";
+            break;
+        case 10:
+            category = "Skolepress";
+            image = "skolepress.jpg";
+            imageAlt = "noen som er stresset foran pcen"
+            break;
+    }   
+    score += number;
+
+    let persentage = (score / 55) * 100;
+
+    updateBackground(score);
+
+    document.getElementById("scoreText").innerHTML = Math.round(persentage) + "%";
+
+   
+
+    // event.target.options[event.target.selectedIndex].disabled = true;
+
+    document.getElementById("sekkDiv").innerHTML += 
+    `
+    <div data-value="${number}">
+    <p>${category}</p> 
+    <button class="removeButton">${fjernKnappTekst}</button>
+    <img src="/img/${image}" alt="${imageAlt}">
+    </div>
+    `;
+   
+    if(!document.querySelector(".resetButton")){
+        sekkDiv.innerHTML += 
+        `
+        <button class="resetButton" id="resetButton">Reset</button>
+        `;
+     }
+
+     console.log(category)
+
+    if(category == "Skolepress"){
+
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/skolepress.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Sosiale medier"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/tiktok.png";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Forventninger"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/forventninger.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Økonomi"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/økonomi.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Karakterer"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/karakterer.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Venner"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/venner.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Familie"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/familie.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Framtiden"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/framtiden.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Søvn og hvile"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/hvile.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Kropp og utseende"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/utseende.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }
+
+
+     
+}
+
+
+function disable(id) {
+    document.getElementById(id).style.display = "none"
+}
+
+function enable(id){
+    console.log("id",id);
+    document.getElementById(`bulletPoint${id}`).style.display = "flex";
+}
+
+function updateBackground(number) {
+    console.log(number, "number")
+    if(number == 0){
+        document.getElementById("rightleft").style.backgroundColor = "#4399b6";
+    }else if(number >= 1 && number < 10) {
+        document.getElementById("rightleft").style.backgroundColor = "#4fa3c1"
+    }else if(number >= 10 && number < 20){
+        document.getElementById("rightleft").style.backgroundColor ="#8cc63f";
+    }else if(number >= 20 && number < 30){
+        document.getElementById("rightleft").style.backgroundColor = "#f1c40f";
+    }else if(number >= 30 && number < 40){
+        document.getElementById("rightleft").style.backgroundColor = "#f39c12";
+    }else if(number >= 40 && number < 50){
+        document.getElementById("rightleft").style.backgroundColor = "#e74c3c";
+    }else if(number >= 50 && number <= 55){
+        document.getElementById("rightleft").style.backgroundColor = "red"
+    }
+}
