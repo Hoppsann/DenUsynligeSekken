@@ -10,7 +10,6 @@ let select = document.getElementById("selectForm");
 let sekkDiv = document.getElementById("sekkDiv");
 let resetButton = document.getElementById("resetButton");
 let sekkImage = document.getElementById("backpack");
-sekkImage.src = "/img/backpack/backpack1.png"
 let category;
 let image;
 let imageAlt;
