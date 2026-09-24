@@ -1,10 +1,8 @@
 <%- include("partials/head.ejs") %>
 <body>
-    <%- include("partials/nav.ejs") %>
+    <!-- <%- include("partials/nav.ejs") %> -->
     <section class="hero">
         <div id="left">
-            <div class="sekkMedTingDiv" id="sekkDiv">
-            </div>
 
             <div class="formDiv">
             <form action="" id="sekkForm">
@@ -23,6 +21,7 @@
                     </select>
             </form>
             </div>
+            <button class="resetButton" id="resetButton">Reset</button>
         </div>
         <div id="right">
             <div id="righttop">
@@ -31,15 +30,16 @@
                     <img src="/img/open-backpack-back.png" id="backpack" class="backpackBack" draggable="false">
                     <img src="/img/open-backpack-front.png" id="backpack2" class="backpackFront" draggable="false">
                 </div>
+                <h2 id="scoreText">0</h2>
                 </div>
                 <div id="rightright">
-                    <h2 id="scoreText">0</h2>
                 </div>
             </div>
 
 
             <div id="rightbottom">
-                
+                            <div class="sekkMedTingDiv" id="sekkDiv">
+            </div>
             </div>
         </div>
     </section>
