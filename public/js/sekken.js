@@ -257,6 +257,10 @@ sekkDiv.addEventListener("click", (event) => {
         for(let i = 0; i < select.options.length; i++){
             select.options[i].disabled = false;
         }
+        for (let i = 0; i <= 10; i++) {
+            enable(index);
+            
+        }
     }
 
     if(!document.querySelector(".removeButton")){
@@ -454,7 +458,11 @@ function enable(id){
 
 function updateBackground(number) {
     console.log(number, "number")
-    if(number >= 10) {
+    if(number >= 5 && number < 10) {
         document.getElementById("rightleft").style.backgroundColor = "green"
+    }else if(number >= 10 && number < 20){
+        document.getElementById("rightleft").style.backgroundColor = "orange";
+    }else if(number >= 20 && number < 30){
+        document.getElementById("rightleft").style.backgroundColor = "redorange"
     }
 }
