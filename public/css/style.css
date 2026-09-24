@@ -129,7 +129,7 @@ h2{
     display: flex;
     position: relative;
 }
-#backpack { 
+.backpackBack, .backpackFront  { 
     width: 50%;
     height: auto;
     position: absolute;
@@ -229,4 +229,75 @@ h2{
     margin-top: auto;
     display: block;
     border-radius: 1rem;
+}
+
+.dropDownElement{
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: drop 1s ease forwards;
+}
+
+
+.dropDownElement{
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    
+    animation: drop 2s ease forwards, spin 1s infinite linear;
+    
+}
+
+.removeElement { 
+    position: fixed; 
+    width: 5rem; 
+    height: 5rem; 
+    left: 50%; 
+    top: 370px; 
+    border-radius: 
+    1rem; offset-path: 
+    path("M 0 0 C -100 -250, 400 -1000, 650 2000"); 
+    offset-distance: 0%; 
+
+    animation: remove 3s ease-in-out forwards; }
+
+@keyframes drop{
+    0%{
+        top: -100px;
+    }
+    
+    100%{
+        top: 370px;
+    }
+}
+
+@keyframes spin{
+    0%{
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100%{
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes remove{
+    0%{
+        offset-distance: 0%;
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+
+    45%{
+        opacity: 0;
+    }
+    100%{
+        offset-distance: 100%;
+    }
 }

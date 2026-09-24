@@ -1,11 +1,3 @@
-// console.log("Hello World!")
-
-// const button = document.getElementById("leggTil")
-
-// button.addEventListener("click", () => {
-//     console.log("test")
-// })
-
 let select = document.getElementById("selectForm");
 let sekkDiv = document.getElementById("sekkDiv");
 let resetButton = document.getElementById("resetButton");
@@ -77,19 +69,7 @@ select.addEventListener("change", (event) =>{
     }   
     score += number;
 
-    if(score >= 0 && score < 10){
-        sekkImage.src = "/img/backpack/backpack1.png";
-    }else if(score > 10 && score < 20){
-        sekkImage.src = "/img/backpack/backpack2.png";
-    }else if(score > 20 && score < 30){
-        sekkImage.src = "/img/backpack/backpack3.png";
-    }else if(score > 30 && score < 40){
-        sekkImage.src = "/img/backpack/backpack4.png";
-    }else if(score > 40 && score < 50){
-        sekkImage.src = "/img/backpack/backpack5.png";
-    }else if(score > 50 && score < 55){
-        sekkImage.src = "/img/backpack/backpack6.png";
-    }
+   
 
     document.getElementById("scoreText").innerHTML = score;
 
@@ -111,6 +91,94 @@ select.addEventListener("change", (event) =>{
         `;
      }
 
+     console.log(category)
+
+    if(category == "Skolepress"){
+
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/skolepress.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Sosiale medier"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/tiktok.png";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Forventninger"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/forventninger.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Økonomi"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/økonomi.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Karakterer"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/karakterer.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Venner"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/venner.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Familie"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/familie.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Framtiden"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/framtiden.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Søvn og hvile"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/hvile.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }if(category == "Kropp og utseende"){
+        let dropDownElement = document.createElement("img");
+        dropDownElement.src = "/img/utseende.jpg";
+        dropDownElement.classList.add("dropDownElement");
+        document.body.appendChild(dropDownElement);
+        setTimeout(() => {
+            dropDownElement.remove();
+        }, 4000);
+    }
+
+
+     
+
     
 })
 
@@ -120,11 +188,62 @@ sekkDiv.addEventListener("click", (event) => {
     if (event.target.classList.contains("removeButton")) {
         let div = event.target.parentElement;
         let value = Number(div.dataset.value);
+        let removeImage;
 
         score -= value;
         div.remove();
         select.querySelector(`option[value = "${value}"]`).disabled = false
         document.getElementById("scoreText").innerHTML = score;
+
+        switch(value){
+            case 1: 
+                removeImage = "utseende.jpg";
+                break;
+
+            case 2:
+                removeImage = "hvile.jpg";
+                break;
+
+            case 3:
+                removeImage = "framtiden.jpg";
+                break;
+
+            case 4:
+                removeImage = "økonomi.jpg";
+                break;
+
+            case 5: 
+                removeImage = "venner.jpg";
+                break;
+
+            case 6:
+                removeImage = "familie.jpg";
+                break;
+
+            case 7:
+                removeImage = "karakterer.jpg";
+                break;
+
+            case 8: 
+                removeImage = "forventninger.jpg";
+                break;
+
+            case 9: 
+                removeImage = "tiktok.png";
+                break;
+
+            case 10:
+                removeImage = "skolepress.jpg";
+                break;
+        }
+
+        let removeElement = document.createElement("img");
+        removeElement.src = `/img/${removeImage}`;
+        removeElement.classList.add("removeElement");
+        document.body.appendChild(removeElement);
+        setTimeout(() => {
+            removeElement.remove()
+        }, 4000);
 
     };
 
@@ -137,6 +256,12 @@ sekkDiv.addEventListener("click", (event) => {
             select.options[i].disabled = false;
         }
     }
+
+    if(!document.querySelector(".removeButton")){
+        sekkDiv.innerHTML = "";
+    }
+
+
 
 });
 
