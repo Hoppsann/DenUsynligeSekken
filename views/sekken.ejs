@@ -2,28 +2,45 @@
 <body>
     <%- include("partials/nav.ejs") %>
     <section class="hero">
-        <h2 id="scoreText">0</h2>   
-        <div id="backpackcontainer">
-            <img src="/img/backpack1.png" id="backpack">
-        </div>
-        <div class="formDiv">
+        <div id="left">
+            <div class="sekkMedTingDiv" id="sekkDiv">
+            </div>
+
+            <div class="formDiv">
             <form action="" id="sekkForm">
                 <label for="">Halla på dæ</label>
-                <select id="selectForm">
-                    <option value="10">Skolepress</option>
-                    <option value="8">Forventninger</option>
-                    <option value="7">Karakterer</option>
-                    <option value="4">Økonomi</option>
-                    <option value="6">Familie</option>
-                    <option value="5">Venner</option>
-                    <option value="9">Sosiale medier</option>
-                    <option value="3">Framtiden</option>
-                    <option value="2">Søvn og hvile</option>
-                    <option value="1">Kropp og utseende</option>
-                </select>
+                    <select id="selectForm">
+                        <option value="10">Skolepress</option>
+                        <option value="8">Forventninger</option>
+                        <option value="7">Karakterer</option>
+                        <option value="4">Økonomi</option>
+                        <option value="6">Familie</option>
+                        <option value="5">Venner</option>
+                        <option value="9">Sosiale medier</option>
+                        <option value="3">Framtiden</option>
+                        <option value="2">Søvn og hvile</option>
+                        <option value="1">Kropp og utseende</option>
+                    </select>
             </form>
+            </div>
         </div>
-        <div class="sekkMedTingDiv" id="sekkDiv">
+        <div id="right">
+            <div id="righttop">
+                <div id="rightleft">
+                <div id="backpackcontainer">
+                    <img src="/img/open-backpack-back.png" id="backpack" class="backpackBack" draggable="false">
+                    <img src="/img/open-backpack-front.png" id="backpack" class="backpackFront" draggable="false">
+                </div>
+                </div>
+                <div id="rightright">
+                    <h2 id="scoreText">0</h2>
+                </div>
+            </div>
+
+
+            <div id="rightbottom">
+                
+            </div>
         </div>
     </section>
 

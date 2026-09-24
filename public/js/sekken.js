@@ -10,7 +10,6 @@ let select = document.getElementById("selectForm");
 let sekkDiv = document.getElementById("sekkDiv");
 let resetButton = document.getElementById("resetButton");
 let sekkImage = document.getElementById("backpack");
-
 let category;
 let image;
 let imageAlt;
@@ -27,53 +26,69 @@ select.addEventListener("change", (event) =>{
     switch(number){
         case 1:
             category = "Kropp og utseende";
-            image = "img.jpg"
-            imageAlt = "Bilde av en person som ser seg i speilet"
+            image = "utseende.jpg";
+            imageAlt = "dame som ser seg i speilet";
             break;
         case 2:
             category = "Søvn og hvile";
-            image = "img2.jpg"
-            imageAlt = "Noen som sover"
+            image = "hvile.jpg";
+            imageAlt = "jente som sover";
             break;
         case 3:
             category = "Framtiden";
+            image = "framtiden.jpg";
+            imageAlt = "robot";
             break;
         case 4:
             category = "Økonomi";
+            image = "økonomi.jpg"
+            imageAlt = "sparegris som bruker kalkulator";
             break;
         case 5:
-            category = "Vennner";
+            category = "Venner";
+            image = "venner.jpg";
+            imageAlt = "4 venner som sitter sammen ved en kliffe";
             break;
         case 6: 
             category = "Familie";
+            image = "familie.jpg";
+            imageAlt = "familie i solnedgang";
             break;
         case 7: 
             category = "Karakterer";
+            image = "karakterer.jpg";
+            imageAlt = "klasserom";
             break;
         case 8:
             category = "Forventninger";
+            image = "forventninger.jpg";
+            imageAlt = "medalje";
             break;
         case 9:
             category = "Sosiale medier";
+            image = "sosiale-medier.jpg";
+            imageAlt = "telefon med sosiale medier installert";
             break;
         case 10:
             category = "Skolepress";
+            image = "skolepress.jpg";
+            imageAlt = "noen som er stresset foran pcen"
             break;
     }   
     score += number;
 
     if(score >= 0 && score < 10){
-        sekkImage.src = "/img/backpack1.png";
+        sekkImage.src = "/img/backpack/backpack1.png";
     }else if(score > 10 && score < 20){
-        sekkImage.src = "/img/backpack2.png";
+        sekkImage.src = "/img/backpack/backpack2.png";
     }else if(score > 20 && score < 30){
-        sekkImage.src = "/img/backpack3.png";
+        sekkImage.src = "/img/backpack/backpack3.png";
     }else if(score > 30 && score < 40){
-        sekkImage.src = "/img/backpack4.png";
+        sekkImage.src = "/img/backpack/backpack4.png";
     }else if(score > 40 && score < 50){
-        sekkImage.src = "/img/backpack5.png";
+        sekkImage.src = "/img/backpack/backpack5.png";
     }else if(score > 50 && score < 55){
-        sekkImage.src = "/img/backpack6.png";
+        sekkImage.src = "/img/backpack/backpack6.png";
     }
 
     document.getElementById("scoreText").innerHTML = score;
