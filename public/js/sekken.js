@@ -606,8 +606,8 @@ function disable(id) {
 }
 
 function enable(id){
-    console.log("id",id);
-    document.getElementById(`bulletPoint${id}`).style.display = "flex";
+    console.log("id", id);
+    document.getElementById(`item${id}`).style.display = "list-item";
 }
 
 function updateBackground(number) {

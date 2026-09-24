@@ -1,9 +1,10 @@
 :root{
     --bgColor: #f8f4ea;
     --bgSecondaryColor: #e1d7c6;
-    --color3: #4399b6;
+    --color3: #367a92;
     --formColor: lightgray;
     --textColor: rgb(255, 248, 248);
+    --darkTextColor: #2b2b2b;
     --buttonColor: black;
     --itemBgColor: rgb(181, 135, 61);
     --navBgColor: lightgray;
@@ -23,7 +24,6 @@ body {
     flex-direction: column;
     height: 100vh;
     font-family: nunito;
-    scrollbar-color: var(--color3) #00000000;
 }
 
 /* #bgCircle {
@@ -97,7 +97,6 @@ nav ol li a {
     border-radius: 2rem;
     position: relative;
 }
-
 #rightright {
     background-color: var(--bgSecondaryColor);
     flex: 1;
@@ -199,6 +198,7 @@ h2{
 
 #sekkForm select option{
     font-size: 1.3rem;
+    color: var(--darkTextColor);
 }
 
 /* #sekkForm button{
@@ -357,30 +357,34 @@ h2{
     list-style-type: none;
 }
 
-
-
 #liste ol li {
     margin-top: 1.2rem;
+}
+
+#liste ol li .itemButton {
+    width: 100%;
     padding: 0.75rem;
     background-color: var(--color3);
+    color: var(--textColor);
+    border: none;
     border-radius: 4rem;
     display: flex;
     align-items: center;
     cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    text-align: left;
     transition: 200ms ease-in-out;
 }
 
-#liste ol li:hover{
-    transform: translateX(-4px);
+#liste ol li .itemButton:hover,
+#liste ol li .itemButton:focus-visible{
+    transform: scale(1.05);
     box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.394);
     transition: 0.1s;
 }
 
-#liste ol li:hover {
-    transform: scale(1.05);
-}
-
-#liste ol li p {
+#liste ol li .itemButton span {
     color: var(--textColor);
     margin-left: 1rem;
 }
@@ -434,21 +438,21 @@ h2{
     min-height: 0;
     overflow-y: auto;
     padding: 1.5rem 2rem;
-    color: #4f483d;
+    color: var(--darkTextColor);
     font-size: 1.15rem;
     line-height: 1.6;
-    /* background-color: var(--color3); */
 }
 
-#infoBox h1 {
+#infoBox h2 {
     font-size: 4rem;
     margin-bottom: 0.5rem;
 }
 
-#infoBox h2 {
-    font-size: 1.3rem;
+#infoBox h3 {
+    font-size: 2rem;
     margin-top: 1.5rem;
     margin-bottom: 0.3rem;
+    text-align: left;
 }
 
 #infoBox p {
@@ -458,8 +462,8 @@ h2{
 #infoBox hr {
     margin: 1.5rem 0;
     border: none;
-    border-top: 1px solid var(--textColor);
-    opacity: 0.4;
+    border-top: 1px solid var(--darkTextColor);
+    opacity: 0.3;
 }
 
 #helpList {
@@ -472,8 +476,8 @@ h2{
 
 #helpList a {
     display: block;
-    background-color: var(--color3);
-    color: var(--textColor);
+    background-color: var(--navBgColor);
+    color: black;
     text-decoration: none;
     padding: 0.75rem 1rem;
     border-radius: 1rem;
@@ -481,6 +485,7 @@ h2{
     transition: 0.15s;
 }
 
-#helpList a:hover {
+#helpList a:hover,
+#helpList a:focus-visible {
     transform: scale(1.02);
 }
