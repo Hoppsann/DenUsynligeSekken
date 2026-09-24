@@ -10,6 +10,14 @@ let score = 0;
 let fjernKnappTekst = "X";
 
 
+function getBackpackTarget() {
+    const rect = document.getElementById("backpack2").getBoundingClientRect();
+    return {
+        x: rect.left + rect.width / 2,
+        y: rect.top + rect.height * 0.55
+    };
+}
+
 
 select.addEventListener("change", (event) =>{
     let selectValue = document.getElementById("selectForm").value;
@@ -98,6 +106,9 @@ select.addEventListener("change", (event) =>{
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/skolepress.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -106,6 +117,9 @@ select.addEventListener("change", (event) =>{
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/tiktok.png";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -114,6 +128,9 @@ select.addEventListener("change", (event) =>{
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/forventninger.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -122,6 +139,9 @@ select.addEventListener("change", (event) =>{
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/økonomi.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -130,6 +150,9 @@ select.addEventListener("change", (event) =>{
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/karakterer.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -138,6 +161,9 @@ select.addEventListener("change", (event) =>{
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/venner.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -146,6 +172,9 @@ select.addEventListener("change", (event) =>{
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/familie.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -154,6 +183,9 @@ select.addEventListener("change", (event) =>{
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/framtiden.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -162,6 +194,9 @@ select.addEventListener("change", (event) =>{
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/hvile.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -170,6 +205,9 @@ select.addEventListener("change", (event) =>{
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/utseende.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -240,6 +278,9 @@ sekkDiv.addEventListener("click", (event) => {
         let removeElement = document.createElement("img");
         removeElement.src = `/img/${removeImage}`;
         removeElement.classList.add("removeElement");
+        let removeTarget = getBackpackTarget();
+        removeElement.style.setProperty("--removeLeft", `${removeTarget.x}px`);
+        removeElement.style.setProperty("--removeTop", `${removeTarget.y}px`);
         document.body.appendChild(removeElement);
         setTimeout(() => {
             removeElement.remove()
@@ -308,6 +349,9 @@ sekkDiv.addEventListener("click", (event) => {
             let removeElement = document.createElement("img");
             removeElement.src = `/img/${removeImage}`;
             removeElement.classList.add("removeElement");
+            let removeTarget = getBackpackTarget();
+            removeElement.style.setProperty("--removeLeft", `${removeTarget.x}px`);
+            removeElement.style.setProperty("--removeTop", `${removeTarget.y}px`);
             document.body.appendChild(removeElement);
 
             setTimeout(() => {
@@ -444,6 +488,9 @@ function addToBag(value) {
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/skolepress.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -452,6 +499,9 @@ function addToBag(value) {
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/tiktok.png";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -460,6 +510,9 @@ function addToBag(value) {
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/forventninger.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -468,6 +521,9 @@ function addToBag(value) {
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/økonomi.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -476,6 +532,9 @@ function addToBag(value) {
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/karakterer.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -484,6 +543,9 @@ function addToBag(value) {
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/venner.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -492,6 +554,9 @@ function addToBag(value) {
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/familie.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -500,6 +565,9 @@ function addToBag(value) {
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/framtiden.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -508,6 +576,9 @@ function addToBag(value) {
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/hvile.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();
@@ -516,6 +587,9 @@ function addToBag(value) {
         let dropDownElement = document.createElement("img");
         dropDownElement.src = "/img/utseende.jpg";
         dropDownElement.classList.add("dropDownElement");
+        let dropTarget = getBackpackTarget();
+        dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+        dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
         document.body.appendChild(dropDownElement);
         setTimeout(() => {
             dropDownElement.remove();

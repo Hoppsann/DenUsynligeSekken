@@ -264,32 +264,22 @@ h2{
 
 .dropDownElement{
     position: fixed;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: drop 1s ease forwards;
-}
-
-
-.dropDownElement{
-    position: fixed;
     top: -100px;
-    left: 50%;
+    left: var(--dropLeft, 50%);
     transform: translateX(-50%);
     width: 5rem;
     height: 5rem;
     border-radius: 1rem;
-    
+
     animation: drop 2s ease forwards, spin 1s infinite linear;
-    
 }
 
 .removeElement { 
     position: fixed; 
     width: 5rem; 
     height: 5rem; 
-    left: 50%; 
-    top: 340px; 
+    left: var(--removeLeft, 50%); 
+    top: var(--removeTop, 340px); 
     border-radius: 1rem; 
     offset-path: path("M 0 0 C -100 -250, 400 -1000, 650 2000"); 
     offset-distance: 0%; 
@@ -302,7 +292,7 @@ h2{
     }
     
     100%{
-        top: 280px;
+        top: var(--dropTop, 280px);
     }
 }
 
@@ -376,7 +366,7 @@ h2{
 
 #liste ol li:hover{
     transform: translateX(-4px);
-    box-shadow: 4px 4px 10px 1px black;
+    box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.394);
     transition: 0.1s;
 }
 
