@@ -110,126 +110,19 @@ select.addEventListener("change", (event) => {
 
   console.log(category);
 
-  if (category == "Skolepress") {
-    let dropDownElement = document.createElement("img");
-    dropDownElement.src = "/img/skolepress.jpg";
-    dropDownElement.classList.add("dropDownElement");
-    let dropTarget = getBackpackTarget();
-    dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+
+  let dropDownElement = document.createElement("img");
+  let url = checkCategory(category);
+  dropDownElement.src = url;
+  dropDownElement.classList.add("dropDownElement");
+  let dropTarget = getBackpackTarget();
+  dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
     dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
     document.body.appendChild(dropDownElement);
     setTimeout(() => {
       dropDownElement.remove();
     }, 4000);
-  }
-  if (category == "Sosiale medier") {
-    let dropDownElement = document.createElement("img");
-    dropDownElement.src = "/img/tiktok.png";
-    dropDownElement.classList.add("dropDownElement");
-    let dropTarget = getBackpackTarget();
-    dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
-    dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
-    document.body.appendChild(dropDownElement);
-    setTimeout(() => {
-      dropDownElement.remove();
-    }, 4000);
-  }
-  if (category == "Forventninger") {
-    let dropDownElement = document.createElement("img");
-    dropDownElement.src = "/img/forventninger.jpg";
-    dropDownElement.classList.add("dropDownElement");
-    let dropTarget = getBackpackTarget();
-    dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
-    dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
-    document.body.appendChild(dropDownElement);
-    setTimeout(() => {
-      dropDownElement.remove();
-    }, 4000);
-  }
-  if (category == "Økonomi") {
-    let dropDownElement = document.createElement("img");
-    dropDownElement.src = "/img/økonomi.jpg";
-    dropDownElement.classList.add("dropDownElement");
-    let dropTarget = getBackpackTarget();
-    dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
-    dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
-    document.body.appendChild(dropDownElement);
-    setTimeout(() => {
-      dropDownElement.remove();
-    }, 4000);
-  }
-  if (category == "Karakterer") {
-    let dropDownElement = document.createElement("img");
-    dropDownElement.src = "/img/karakterer.jpg";
-    dropDownElement.classList.add("dropDownElement");
-    let dropTarget = getBackpackTarget();
-    dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
-    dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
-    document.body.appendChild(dropDownElement);
-    setTimeout(() => {
-      dropDownElement.remove();
-    }, 4000);
-  }
-  if (category == "Venner") {
-    let dropDownElement = document.createElement("img");
-    dropDownElement.src = "/img/venner.jpg";
-    dropDownElement.classList.add("dropDownElement");
-    let dropTarget = getBackpackTarget();
-    dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
-    dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
-    document.body.appendChild(dropDownElement);
-    setTimeout(() => {
-      dropDownElement.remove();
-    }, 4000);
-  }
-  if (category == "Familie") {
-    let dropDownElement = document.createElement("img");
-    dropDownElement.src = "/img/familie.jpg";
-    dropDownElement.classList.add("dropDownElement");
-    let dropTarget = getBackpackTarget();
-    dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
-    dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
-    document.body.appendChild(dropDownElement);
-    setTimeout(() => {
-      dropDownElement.remove();
-    }, 4000);
-  }
-  if (category == "Framtiden") {
-    let dropDownElement = document.createElement("img");
-    dropDownElement.src = "/img/framtiden.jpg";
-    dropDownElement.classList.add("dropDownElement");
-    let dropTarget = getBackpackTarget();
-    dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
-    dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
-    document.body.appendChild(dropDownElement);
-    setTimeout(() => {
-      dropDownElement.remove();
-    }, 4000);
-  }
-  if (category == "Søvn og hvile") {
-    let dropDownElement = document.createElement("img");
-    dropDownElement.src = "/img/hvile.jpg";
-    dropDownElement.classList.add("dropDownElement");
-    let dropTarget = getBackpackTarget();
-    dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
-    dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
-    document.body.appendChild(dropDownElement);
-    setTimeout(() => {
-      dropDownElement.remove();
-    }, 4000);
-  }
-  if (category == "Kropp og utseende") {
-    let dropDownElement = document.createElement("img");
-    dropDownElement.src = "/img/utseende.jpg";
-    dropDownElement.classList.add("dropDownElement");
-    let dropTarget = getBackpackTarget();
-    dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
-    dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
-    document.body.appendChild(dropDownElement);
-    setTimeout(() => {
-      dropDownElement.remove();
-    }, 4000);
-  }
+
 });
 
 sekkDiv.addEventListener("click", (event) => {
@@ -487,8 +380,7 @@ function addToBag(value) {
         `;
   }
 
-  console.log(category);
-  console.log(numberOfItems);
+
   let dropDownElement = document.createElement("img");
   let url = checkCategory(category);
   dropDownElement.src = url;
