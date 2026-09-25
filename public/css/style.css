@@ -77,11 +77,15 @@ nav ol li a {
     background-color: var(--bgSecondaryColor);
     flex: 1;
     height: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+#leftContent {
+    height: 100%;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
-    border-radius: 2rem;
 }
 
 #right {
@@ -295,7 +299,17 @@ animation: drop 2s ease forwards, spin 1s 1 linear forwards;
     offset-path: path("M 0 0 C -100 -250, 400 -1000, 650 2000"); 
     offset-distance: 0%; 
 
-    animation: remove 3s ease-in-out forwards; }
+    animation: remove 3s ease-in-out forwards; 
+
+}
+
+#stressinnholdHeader {
+    text-align: left;
+    font-size: 2.5rem;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 0;
+}
 
 @keyframes drop{
     0%{

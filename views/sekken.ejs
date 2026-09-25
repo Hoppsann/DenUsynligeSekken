@@ -4,40 +4,42 @@
     <main>
     <section class="hero">
         <div id="left">
-            <div id="lefth1">
-                <h2>Hva stresser deg?</h2>
-                <h3>klikk for å legge til</h3>
-            </div>
-            <div id="liste">
-                <ol>
-                    <li id="item8"><button type="button" class="itemButton" onclick="addToBag(8), disable('item8')"><div class="bulletPoint" id="bulletPoint8"></div><span>Forventninger</span></button></li>
-                    <li id="item7"><button type="button" class="itemButton" onclick="addToBag(7), disable('item7')"><div class="bulletPoint" id="bulletPoint7"></div><span>Karakterer</span></button></li>
-                    <li id="item10"><button type="button" class="itemButton" onclick="addToBag(10), disable('item10')"><div class="bulletPoint" id="bulletPoint10"></div><span>Skolepress</span></button></li>
-                    <li id="item4"><button type="button" class="itemButton" onclick="addToBag(4), disable('item4')"><div class="bulletPoint" id="bulletPoint4"></div><span>Økonomi</span></button></li>
-                    <li id="item6"><button type="button" class="itemButton" onclick="addToBag(6), disable('item6')"><div class="bulletPoint" id="bulletPoint6"></div><span>Familie</span></button></li>
-                    <li id="item5"><button type="button" class="itemButton" onclick="addToBag(5), disable('item5')"><div class="bulletPoint" id="bulletPoint5"></div><span>Venner</span></button></li>
-                    <li id="item9"><button type="button" class="itemButton" onclick="addToBag(9), disable('item9')"><div class="bulletPoint" id="bulletPoint9"></div><span>Sosiale medier</span></button></li>
-                    <li id="item3"><button type="button" class="itemButton" onclick="addToBag(3), disable('item3')"><div class="bulletPoint" id="bulletPoint3"></div><span>Framtiden</span></button></li>
-                    <li id="item2"><button type="button" class="itemButton" onclick="addToBag(2), disable('item2')"><div class="bulletPoint" id="bulletPoint2"></div><span>Søvn og hvile</span></button></li>
-                    <li id="item1"><button type="button" class="itemButton" onclick="addToBag(1), disable('item1')"><div class="bulletPoint" id="bulletPoint1"></div><span>Kropp og utseende</span></button></li>
-                </ol>
-            </div>
-            <div class="formDiv">
-            <form action="" id="sekkForm">
-                <label for="selectForm">Halla på dæ</label>
-                    <select id="selectForm">
-                        <option value="10">Skolepress</option>
-                        <option value="8">Forventninger</option>
-                        <option value="7">Karakterer</option>
-                        <option value="4">Økonomi</option>
-                        <option value="6">Familie</option>
-                        <option value="5">Venner</option>
-                        <option value="9">Sosiale Medier</option>
-                        <option value="3">Framtiden</option>
-                        <option value="2">Søvn og hvile</option>
-                        <option value="1">Kropp og utseende</option>
-                    </select>
-            </form>
+            <div id="leftContent">
+                <div id="lefth1">
+                    <h2>Hva stresser deg?</h2>
+                    <h3>klikk for å legge til</h3>
+                </div>
+                <div id="liste">
+                    <ol>
+                        <li id="item8"><button type="button" class="itemButton" onclick="addToBag(8), disable('item8')"><div class="bulletPoint" id="bulletPoint8"></div><span>Forventninger</span></button></li>
+                        <li id="item7"><button type="button" class="itemButton" onclick="addToBag(7), disable('item7')"><div class="bulletPoint" id="bulletPoint7"></div><span>Karakterer</span></button></li>
+                        <li id="item10"><button type="button" class="itemButton" onclick="addToBag(10), disable('item10')"><div class="bulletPoint" id="bulletPoint10"></div><span>Skolepress</span></button></li>
+                        <li id="item4"><button type="button" class="itemButton" onclick="addToBag(4), disable('item4')"><div class="bulletPoint" id="bulletPoint4"></div><span>Økonomi</span></button></li>
+                        <li id="item6"><button type="button" class="itemButton" onclick="addToBag(6), disable('item6')"><div class="bulletPoint" id="bulletPoint6"></div><span>Familie</span></button></li>
+                        <li id="item5"><button type="button" class="itemButton" onclick="addToBag(5), disable('item5')"><div class="bulletPoint" id="bulletPoint5"></div><span>Venner</span></button></li>
+                        <li id="item9"><button type="button" class="itemButton" onclick="addToBag(9), disable('item9')"><div class="bulletPoint" id="bulletPoint9"></div><span>Sosiale medier</span></button></li>
+                        <li id="item3"><button type="button" class="itemButton" onclick="addToBag(3), disable('item3')"><div class="bulletPoint" id="bulletPoint3"></div><span>Framtiden</span></button></li>
+                        <li id="item2"><button type="button" class="itemButton" onclick="addToBag(2), disable('item2')"><div class="bulletPoint" id="bulletPoint2"></div><span>Søvn og hvile</span></button></li>
+                        <li id="item1"><button type="button" class="itemButton" onclick="addToBag(1), disable('item1')"><div class="bulletPoint" id="bulletPoint1"></div><span>Kropp og utseende</span></button></li>
+                    </ol>
+                </div>
+                <div class="formDiv">
+                <form action="" id="sekkForm">
+                    <label for="selectForm">Halla på dæ</label>
+                        <select id="selectForm">
+                            <option value="10">Skolepress</option>
+                            <option value="8">Forventninger</option>
+                            <option value="7">Karakterer</option>
+                            <option value="4">Økonomi</option>
+                            <option value="6">Familie</option>
+                            <option value="5">Venner</option>
+                            <option value="9">Sosiale Medier</option>
+                            <option value="3">Framtiden</option>
+                            <option value="2">Søvn og hvile</option>
+                            <option value="1">Kropp og utseende</option>
+                        </select>
+                </form>
+                </div>
             </div>
         </div>
         <div id="right">
@@ -83,6 +85,7 @@
 
 
             <div id="rightbottom">
+                <h2 id="stressinnholdHeader">Ditt stressinnhold:</h2>
                 <div class="sekkMedTingDiv" id="sekkDiv">
             <!-- <button class="resetButton" id="resetButton">Reset</button> -->
             </div>
