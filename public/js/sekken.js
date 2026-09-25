@@ -194,6 +194,8 @@ sekkDiv.addEventListener("click", (event) => {
         break;
     }
 
+    numberOfItems--;
+
     let removeElement = document.createElement("img");
     removeElement.src = `/img/${removeImage}`;
     removeElement.classList.add("removeElement");
@@ -267,6 +269,8 @@ sekkDiv.addEventListener("click", (event) => {
             removeImage = "skolepress.jpg";
             break;
         }
+
+        numberOfItems = 0;
 
         let removeElement = document.createElement("img");
         removeElement.src = `/img/${removeImage}`;

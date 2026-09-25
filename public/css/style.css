@@ -277,7 +277,7 @@ h2{
 }
 
 .dropDownElement{
-    position: fixed;
+    position: absolute;
     top: -100px;
     left: var(--dropLeft, 50%);
     transform: translateX(-50%);
@@ -520,7 +520,7 @@ animation: drop 2s ease forwards, spin 1s 1 linear forwards;
 #healthMessage {
     color: var(--textColor);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     position: relative;
     display: flex;
     justify-content: center;
@@ -546,7 +546,7 @@ animation: drop 2s ease forwards, spin 1s 1 linear forwards;
     }
 
     #healthMessage {
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-align: center;
     }
 
