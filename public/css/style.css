@@ -447,6 +447,7 @@ h2{
 #infoBox h2 {
     font-size: 4rem;
     margin-bottom: 0.5rem;
+    text-decoration: underline;
 }
 
 #infoBox h3 {
