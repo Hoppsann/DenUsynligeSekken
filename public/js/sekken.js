@@ -626,17 +626,17 @@ function enable(id){
 function updateBackground(number) {
     console.log(number, "number")
     if(number == 0){
-        document.getElementById("rightleft").style.backgroundColor = "#4399b6";
+        document.getElementById("rightleft").style.backgroundColor = "#367a92";
     }else if(number >= 1 && number < 10) {
-        document.getElementById("rightleft").style.backgroundColor = "#4fa3c1"
+        document.getElementById("rightleft").style.backgroundColor = "#3a4c86"
     }else if(number >= 10 && number < 20){
-        document.getElementById("rightleft").style.backgroundColor ="#8cc63f";
+        document.getElementById("rightleft").style.backgroundColor ="#483770";
     }else if(number >= 20 && number < 30){
-        document.getElementById("rightleft").style.backgroundColor = "#f1c40f";
+        document.getElementById("rightleft").style.backgroundColor = "#622764";
     }else if(number >= 30 && number < 40){
-        document.getElementById("rightleft").style.backgroundColor = "#f39c12";
+        document.getElementById("rightleft").style.backgroundColor = "#77152a";
     }else if(number >= 40 && number < 50){
-        document.getElementById("rightleft").style.backgroundColor = "#e74c3c";
+        document.getElementById("rightleft").style.backgroundColor = "#a30000";
     }else if(number >= 50 && number <= 55){
         document.getElementById("rightleft").style.backgroundColor = "red"
     }
