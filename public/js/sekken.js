@@ -436,34 +436,34 @@ function checkCategory(category) {
   }
 
   if (category == "Forventninger") {
-    url = "/img/tiktok.png";
+    url = "/img/forventninger.jpg";
   }
 
   if (category == "Økonomi") {
-    url = "/img/tiktok.png";
+    url = "/img/økonomi.jpg";
   }
 
   if (category == "Familie") {
-    url = "/img/tiktok.png";
+    url = "/img/familie.jpg";
   }
   if (category == "Venner") {
-    url = "/img/tiktok.png";
+    url = "/img/venner.jpg";
   }
 
   if (category == "Søvn og hvile") {
-    url = "/img/tiktok.png";
+    url = "/img/hvile.jpg";
   }
 
   if (category == "Kropp og utseende") {
-    url = "/img/tiktok.png";
+    url = "/img/utseende.jpg";
   }
 
   if (category == "Karakterer") {
-    url = "/img/tiktok.png";
+    url = "/img/karakterer.jpg";
   }
 
   if (category == "Framtiden") {
-    url = "/img/tiktok.png";
+    url = "/img/framtiden.jpg";
   }
 
   return url;
