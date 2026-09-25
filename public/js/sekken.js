@@ -12,10 +12,24 @@ let fjernKnappTekst = "X";
 
 function getBackpackTarget() {
   const rect = document.getElementById("backpack2").getBoundingClientRect();
-  return {
+
+  if(numberOfItems <= 3) {
+      return {
     x: rect.left + rect.width / 2,
     y: rect.top + rect.height * 0.6,
   };
+  } else if(numberOfItems >=4){
+         return {
+    x: rect.left + rect.width / 3,
+    y: rect.top + rect.height * 0.5,
+  };
+  } else if (numberOfItems >= 8) {
+             return {
+    x: rect.left + rect.width / 1,
+    y: rect.top + rect.height * 0.4,
+  };
+  }
+
 }
 
 select.addEventListener("change", (event) => {
@@ -480,20 +494,13 @@ function addToBag(value) {
   dropDownElement.src = url;
   dropDownElement.classList.add("dropDownElement");
   let dropTarget = getBackpackTarget();
-  if (numberOfItems <= 3) {
-      console.log("adding", numberOfItems);
-      
-      
-      
-    dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+  dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
     dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
     document.body.appendChild(dropDownElement);
     setTimeout(() => {
       dropDownElement.remove();
     }, 4000);
-  }  else {
 
-  }
 
 }
 
@@ -526,6 +533,8 @@ function updateBackground(number) {
 }
 
 function checkCategory(category) {
+    console.log(category, "KATT");
+    
   let url;
   if (category == "Skolepress") {
     url = "/img/skolepress.jpg";
