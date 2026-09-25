@@ -10,11 +10,12 @@ let score = 0;
 let fjernKnappTekst = "X";
 
 
+
 function getBackpackTarget() {
     const rect = document.getElementById("backpack2").getBoundingClientRect();
     return {
         x: rect.left + rect.width / 2,
-        y: rect.top + rect.height * 0.55
+        y: rect.top + rect.height * 0.6
     };
 }
 
@@ -229,9 +230,14 @@ sekkDiv.addEventListener("click", (event) => {
         let removeImage;
 
         score -= value;
+
+        
         div.remove();
         select.querySelector(`option[value = "${value}"]`).disabled = false
-        document.getElementById("scoreText").innerHTML = score;
+        let persentage = (score / 55) * 100;
+        document.getElementById("scoreText").innerHTML = Math.round(persentage) + "%";
+        
+
 
         switch(value){
             case 1: 
@@ -288,6 +294,10 @@ sekkDiv.addEventListener("click", (event) => {
         console.log("value", value)
         enable(value);
         updateBackground(score);
+
+        if(persentage == 0){
+            sekkDiv.innerHTML = "";
+        }
 
     };
 
@@ -367,7 +377,7 @@ sekkDiv.addEventListener("click", (event) => {
             updateBackground(score)
 
             enable(value)
-        }, index * 500);
+        }, index * 350);
 
     });
 
@@ -460,6 +470,7 @@ function addToBag(value) {
     updateBackground(score);
 
     document.getElementById("scoreText").innerHTML = Math.round(persentage) + "%";
+
 
    
 
@@ -595,6 +606,8 @@ function addToBag(value) {
             dropDownElement.remove();
         }, 4000);
     }
+
+    
 
 
      

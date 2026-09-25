@@ -79,7 +79,7 @@ nav ol li a {
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-y: scroll;
     border-radius: 2rem;
 }
 
@@ -339,7 +339,7 @@ h2{
     justify-content: center;
 }
 
-#lefth1 h1 {
+#lefth1 h2 {
     background-color: var(--color3);
     width: 30rem;
     height: 7.5rem;
@@ -538,8 +538,8 @@ h2{
 
     /* --- 3. LEGG TIL (Knappene) --- */
     #left { order: 2; }
-    #lefth1 { margin-top: 1rem; }
-    #lefth1 h1 { width: 90%; font-size: 2.2rem; }
+    #lefth2 { margin-top: 1rem; }
+    #lefth2 h2 { width: 90%; font-size: 2.2rem; }
     
     #liste ol {
         display: grid;
