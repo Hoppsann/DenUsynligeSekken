@@ -3,6 +3,8 @@
 ## Hva løsningen gjør
 Den usynlige sekken er en webapplikasjon som lar brukeren legge til forskjellige ting i hverdagen som brukeren føler er en belastning i hverdagen som kan blir visuelt vist som en sekk som blir tyngere for hver ting som blir lagt til. Hver belastning har en gitt verdi og blir lagt til en total verdi ut ifra hva brukeren velger. Brukeren kan legge til, fjerne og reset alle belastninegen ut ifra eget valg. Ingen logg inn eller andre opplysninger blir lagret. En helt anonym webapplikasjon. 
 
+## Fordeling av oppgaver
+Vi hadde fordelt oppgaver slik at alle fikk de områdene de var best i! Even sto bak mye av styling, Lukas med universell utforming og Andreas med mye JavaScript. Alle har vært bort hverandres oppgaver også for å komme med innspill. Even var prosjekt leder og er eier repositoriet!
 
 
 ## Hvilke teknologier som brueks
@@ -41,11 +43,10 @@ git clone https://github.com/Hoppsann/DenUsynligeSekken
 
 ### Installer de nødvengige pakkene ved bruk av npm
 1. Gå inn på visual stuido code og gå til terminalen 
-2. Skriv inn inn følgende kommand: 
+2. Skriv inn inn følgende kommand for å installere alle pakkene i json filen som kommer ifølge med cloningen av repository
 ```bash
 npm install
 ```
-   for å installere alle pakkene i json filen som flger cloningen av r
 
 3. Hvis ikke npm install funket må du skrive inn følgende kommandoer:
 ```bash
@@ -83,3 +84,6 @@ For at man skal kunen kjøre serveren lokalt på pcen må du ha følgende tilgje
 3. Visual Studio Code eller annet programmerings program
 
 
+
+#### Signatur av lærer på at jeg ikke trenger å skrive om feilsøking: ()
+Signatur: Fudge (Monica)

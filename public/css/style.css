@@ -78,7 +78,6 @@ nav ol li a {
     flex: 1;
     height: 100%;
     border-radius: 2rem;
-    overflow: hidden;
 }
 
 #leftContent {
@@ -469,13 +468,13 @@ animation: drop 2s ease forwards, spin 1s 1 linear forwards;
     line-height: 1.6;
 }
 
-#infoBox h2 {
-    font-size: 4rem;
+#infoBox h1 {
+    font-size: 3.1rem;
     margin-bottom: 0.5rem;
     text-decoration: underline;
 }
 
-#infoBox h3 {
+#infoBox h2 {
     font-size: 2rem;
     margin-top: 1.5rem;
     margin-bottom: 0.3rem;
