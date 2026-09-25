@@ -423,21 +423,27 @@ function enable(id) {
 }
 
 function updateBackground(number) {
-  console.log(number, "number");
   if (number == 0) {
     document.getElementById("rightleft").style.backgroundColor = "#367a92";
+    document.getElementById("healthMessage").innerHTML = "Sekken er tom. Pust ut.";
   } else if (number >= 1 && number < 10) {
     document.getElementById("rightleft").style.backgroundColor = "#3a4c86";
+    document.getElementById("healthMessage").innerHTML = "Litt vekt i sekken er helt normalt.";
   } else if (number >= 10 && number < 20) {
     document.getElementById("rightleft").style.backgroundColor = "#483770";
+    document.getElementById("healthMessage").innerHTML = "Sekken fylles. Husk å ta pauser.";
   } else if (number >= 20 && number < 30) {
     document.getElementById("rightleft").style.backgroundColor = "#622764";
+    document.getElementById("healthMessage").innerHTML = "Det blir tyngre. Kan du dele det med noen?";
   } else if (number >= 30 && number < 40) {
     document.getElementById("rightleft").style.backgroundColor = "#77152a";
+    document.getElementById("healthMessage").innerHTML = "Ganske tungt nå. Ikke bær alt alene.";
   } else if (number >= 40 && number < 50) {
     document.getElementById("rightleft").style.backgroundColor = "#a30000";
+    document.getElementById("healthMessage").innerHTML = "Dette er mye for én person. Det finnes hjelp.";
   } else if (number >= 50 && number <= 55) {
     document.getElementById("rightleft").style.backgroundColor = "red";
+    document.getElementById("healthMessage").innerHTML = "Sekken er tung. Vær så snill å snakke med noen.";
   }
 }
 
