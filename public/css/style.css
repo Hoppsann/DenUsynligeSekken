@@ -80,6 +80,7 @@ nav ol li a {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    overflow-x: hidden;
     border-radius: 2rem;
 }
 
@@ -278,8 +279,9 @@ h2{
     width: 5rem;
     height: 5rem;
     border-radius: 1rem;
+    object-fit: cover;
 
-    animation: drop 2s ease forwards, spin 1s infinite linear;
+animation: drop 2s ease forwards, spin 1s 1 linear forwards;
 }
 
 .removeElement { 
@@ -338,10 +340,12 @@ h2{
     margin-top: 2rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #lefth1 h2 {
-    width: 30rem;
+    width: 40rem;
     height: 7.5rem;
     border-radius: 2rem;
     font-size: 4rem;
@@ -350,6 +354,12 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#lefth1 h3 {
+    font-size: 2rem;
+    margin-top: -2rem;
+    color: var(--darkTextColor);
 }
 
 #liste ol{
@@ -401,7 +411,7 @@ h2{
 #bulletPoint1 {background-color: red;}
 #bulletPoint2 {background-color: orange;}
 #bulletPoint3 {background-color: yellow;}
-#bulletPoint4 {background-color: green;}
+#bulletPoint4 {background-color: rgb(31, 230, 31);}
 #bulletPoint5 {background-color: lightblue;}
 #bulletPoint6 {background-color: darkblue;}
 #bulletPoint7 {background-color: purple;}

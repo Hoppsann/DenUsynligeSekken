@@ -10,26 +10,30 @@ let amount = 0;
 let score = 0;
 let fjernKnappTekst = "X";
 
+function random(min, max, decimals) {
+    const rawNumber = Math.random() * (max - min) + min;
+    return Number(rawNumber.toFixed(decimals));
+}
+
 function getBackpackTarget() {
   const rect = document.getElementById("backpack2").getBoundingClientRect();
 
-  if(numberOfItems <= 3) {
-      return {
-    x: rect.left + rect.width / 2,
-    y: rect.top + rect.height * 0.6,
-  };
-  } else if(numberOfItems >=4){
-         return {
-    x: rect.left + rect.width / 3,
-    y: rect.top + rect.height * 0.5,
-  };
-  } else if (numberOfItems >= 8) {
-             return {
-    x: rect.left + rect.width / 1,
-    y: rect.top + rect.height * 0.4,
-  };
+  if (numberOfItems >= 8) {
+    return {
+      x: rect.left + rect.width / random(1.4, 2.9, 2),
+      y: rect.top + rect.height * 0.3,
+    };
+  } else if (numberOfItems >= 4) {
+    return {
+      x: rect.left + rect.width / random(1.4, 2.9, 2),
+      y: rect.top + rect.height * 0.4,
+    };
+  } else {
+    return {
+      x: rect.left + rect.width / random(1.4, 2.9, 2),
+      y: rect.top + rect.height * 0.5
+    };
   }
-
 }
 
 select.addEventListener("change", (event) => {
@@ -104,24 +108,28 @@ select.addEventListener("change", (event) => {
 
   if (!document.querySelector(".resetButton")) {
     sekkDiv.innerHTML += `
-        <button class="resetButton" id="resetButton">Reset</button>
+        <button class="resetButton" id="resetButton">reset</button>
         `;
   }
 
   console.log(category);
 
 
-  let dropDownElement = document.createElement("img");
-  let url = checkCategory(category);
-  dropDownElement.src = url;
-  dropDownElement.classList.add("dropDownElement");
-  let dropTarget = getBackpackTarget();
-  dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
+    let dropDownElement = document.createElement("img");
+    let url = checkCategory(category);
+    dropDownElement.src = url;
+    dropDownElement.classList.add("dropDownElement");
+    let dropTarget = getBackpackTarget();
+    dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
     dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
+
+    let randomRot = random(0, 360, 0);
+    dropDownElement.style.setProperty("--finalRot", `${randomRot}deg`);
+
     document.body.appendChild(dropDownElement);
-    setTimeout(() => {
-      dropDownElement.remove();
-    }, 4000);
+    // setTimeout(() => {
+    //   dropDownElement.remove();
+    // }, 4000);
 
 });
 
@@ -130,6 +138,10 @@ sekkDiv.addEventListener("click", (event) => {
     let div = event.target.parentElement;
     let value = Number(div.dataset.value);
     let removeImage;
+    let imageToRemove = document.querySelector(`.dropDownElement[data-value="${value}"]`);
+    if (imageToRemove) {
+        imageToRemove.remove();
+    }
 
     score -= value;
     amount -= 1;
@@ -209,6 +221,10 @@ sekkDiv.addEventListener("click", (event) => {
         let div = button.parentElement;
         let value = Number(div.dataset.value);
         let removeImage;
+        let imageToRemove = document.querySelector(`.dropDownElement[data-value="${value}"]`);
+        if (imageToRemove) {
+            imageToRemove.remove();
+        }
 
         switch (value) {
           case 1:
@@ -376,7 +392,7 @@ function addToBag(value) {
 
   if (!document.querySelector(".resetButton")) {
     sekkDiv.innerHTML += `
-        <button class="resetButton" id="resetButton">Reset</button>
+        <button class="resetButton" id="resetButton">reset</button>
         `;
   }
 
@@ -385,13 +401,14 @@ function addToBag(value) {
   let url = checkCategory(category);
   dropDownElement.src = url;
   dropDownElement.classList.add("dropDownElement");
+  dropDownElement.dataset.value = number;
   let dropTarget = getBackpackTarget();
   dropDownElement.style.setProperty("--dropLeft", `${dropTarget.x}px`);
     dropDownElement.style.setProperty("--dropTop", `${dropTarget.y}px`);
     document.body.appendChild(dropDownElement);
-    setTimeout(() => {
-      dropDownElement.remove();
-    }, 4000);
+    // setTimeout(() => {
+    //   dropDownElement.remove();
+    // }, 4000);
 
 
 }
