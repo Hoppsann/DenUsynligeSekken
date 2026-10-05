@@ -1,5 +1,8 @@
 # DenUsynligeSekken
 
+[Trykk her for å gå til Den Usynlige Sekken](https://denusynligesekken.mineelever.no/)
+![Skjermbilde av DenUsynligeSekken](public/img/denUsynligeSekken.png)
+
 ## Hva løsningen gjør
 Den usynlige sekken er en webapplikasjon som lar brukeren legge til forskjellige ting i hverdagen som brukeren føler er en belastning i hverdagen som kan blir visuelt vist som en sekk som blir tyngere for hver ting som blir lagt til. Hver belastning har en gitt verdi og blir lagt til en total verdi ut ifra hva brukeren velger. Brukeren kan legge til, fjerne og reset alle belastninegen ut ifra eget valg. Ingen logg inn eller andre opplysninger blir lagret. En helt anonym webapplikasjon. 
 
@@ -7,7 +10,7 @@ Den usynlige sekken er en webapplikasjon som lar brukeren legge til forskjellige
 Vi hadde fordelt oppgaver slik at alle fikk de områdene de var best i! Even sto bak mye av styling, Lukas med universell utforming og Andreas med mye JavaScript. Alle har vært bort hverandres oppgaver også for å komme med innspill. Even var prosjekt leder og er eier repositoriet!
 
 
-## Hvilke teknologier som brueks
+## Hvilke teknologier som brukes
 
 ### Prosjektet bruker:
 
@@ -85,5 +88,71 @@ For at man skal kunen kjøre serveren lokalt på pcen må du ha følgende tilgje
 
 
 
-#### Signatur av lærer på at jeg ikke trenger å skrive om feilsøking: ()
-Signatur: Fudge (Monica)
+## Feilsøking 
+
+Det kan oppstå problmemer og da er det viktig at man skjekker følgende ting:
+
+### Skjekk om Node js og git er installert
+ 
+ Kjør følgende kommando i terminalen:
+```bash
+    node -v
+```
+Hvis terminalen ikke viser eller finner node må Node js installeres
+
+---
+
+### Skjekk om de nødvenige pakkene er installert
+
+Kjør følgende kommando i terminalen:
+```bash
+    npm i
+```
+
+Dette vil installere de pakkene som ligger i package.json når du cloner prosjektet med git
+
+---
+
+### Skjekk om du er i riktig mappe
+
+Dette kan du teste ved å gå inn i terminalen og skrive in følgende kommando:
+
+```bash
+    ls
+```
+
+### Kontroller at serveren kjører
+ Når du kjører følgende kommando i terminalen:
+ ```bash
+    nodemon app.js
+```
+
+Skal terminalen vise følgene ved oppstart av serveren:
+![Skjermbilde av nodemon](public/img/nodemon.png)
+
+Hvis serveren stopper og du får en feilmelding, da må du lese feilmeldingen
+
+### Kontroller port
+
+Kontroller at porten i app.js stemmer overens med nett adressen som blitt oppgitt i nettleseren.
+
+Hvis prosjektet bruker port 4000, da må nett adressen være følgende:
+
+```bash
+    http://localhost:4000
+```
+
+### Start serveren på nytt
+
+Hvis serveren oppfører seg rart eller uventet kan du stoppe serveren med:
+
+<u>Windows</u>: Ctrl + C
+
+<u>Mac</u>: Control + C
+
+
+Start serveren deretter på igjen med følgende kommando i terminalen:
+
+```bash
+    nodemon app.js
+```
