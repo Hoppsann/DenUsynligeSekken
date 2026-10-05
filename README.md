@@ -21,7 +21,7 @@ DenUsynligeSekken/
 
 ## Fordeling av oppgaver
 
-Vi fordelte oppgavene slik at alle fikk de områdene de var best i! Even sto bak mye av stylingen, Lukas jobbet med universell utforming og Andreas med mye JavaScript. Alle har vært innom hverandres oppgaver også for å komme med innspill. Even var prosjektleder og eier repositoriet!
+Vi fordelte oppgavene slik at alle fikk de områdene de var best i! Even (GitHub: `Hoppsann`) sto bak mye av stylingen, Lukas (GitHub: `GitBean-cell`) jobbet med universell utforming, brainstorming og fargepalett, og Andreas (GitHub: `LohnyVal`) med mye JavaScript. Alle har vært innom hverandres oppgaver også for å komme med innspill. Even var prosjektleder og eier repositoryet!
 
 ## Samarbeid og Git
 
