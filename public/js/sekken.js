@@ -108,7 +108,7 @@ select.addEventListener("change", (event) => {
 
   if (!document.querySelector(".resetButton")) {
     sekkDiv.innerHTML += `
-        <button class="resetButton" id="resetButton">reset</button>
+        <button class="resetButton" id="resetButton" aria-label="Fjern alt fra sekken">reset</button>
         `;
   }
 

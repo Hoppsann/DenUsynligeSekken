@@ -670,8 +670,10 @@ animation: drop 2s ease forwards, spin 1s 1 linear forwards;
     }
 
     .sekkMedTingDiv div button {
-        top: -0.4rem;
-        right: -0.4rem;
+        top: 0.4rem;
+        right: 0.4rem;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     #resetButton {
@@ -695,4 +697,8 @@ animation: drop 2s ease forwards, spin 1s 1 linear forwards;
         height: auto;
         overflow: visible;
     }
+    #rightbottom h2{
+        text-align: center;
+    }
+    
 }
