@@ -49,7 +49,7 @@ body {
     text-align: left;
     margin: 0;
     color: var(--textColor);
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 
 nav {
@@ -257,10 +257,11 @@ h2{
     border: none;
 }
 
+
 .sekkMedTingDiv p {
     margin-bottom: 1rem;
     font-size: 1.25rem;
-    max-width: 10rem;
+    max-width: 12rem;
     overflow-wrap: break-word;
     position: absolute;
 }
@@ -442,7 +443,8 @@ animation: drop 2s ease forwards, spin 1s 1 linear forwards;
     position: absolute;
     z-index: 10;
     bottom: 3rem;
-    margin-left: 3rem;
+    right: 0;
+    margin-right: 3.4rem;
     font-size: 2rem;
     background-color: #37829b;
     color: var(--textColor);
@@ -456,6 +458,7 @@ animation: drop 2s ease forwards, spin 1s 1 linear forwards;
 #resetButton:hover {
     transform: scale(1.05);
     background-color: #32758b;
+    border: 1px solid white;
 }
 
 #infoBox {
@@ -472,6 +475,7 @@ animation: drop 2s ease forwards, spin 1s 1 linear forwards;
     font-size: 3.1rem;
     margin-bottom: 0.5rem;
     text-decoration: underline;
+    text-align: center;
 }
 
 #infoBox h2 {
@@ -519,11 +523,15 @@ animation: drop 2s ease forwards, spin 1s 1 linear forwards;
 #healthMessage {
     color: var(--textColor);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     position: relative;
     display: flex;
     justify-content: center;
     margin: 0;
+}
+
+.removeButton{
+    cursor: pointer;
 }
 
 
@@ -632,7 +640,7 @@ animation: drop 2s ease forwards, spin 1s 1 linear forwards;
     }
 
     .sekkMedTingDiv div {
-        width: 9rem;
+        width: 9Frem;
         height: 12rem;
         margin: 0; 
         display: flex;
